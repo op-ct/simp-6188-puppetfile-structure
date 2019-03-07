@@ -1,0 +1,8 @@
+mod 'puppetlabs-docker',
+  :git => 'https://github.com/simp/puppetlabs-docker',
+  :tag => '1.1.0'
+
+mod 'simp-simp_docker',
+  :git => 'https://github.com/simp/pupmod-simp-simp_docker',
+  :tag => '0.2.0'
+

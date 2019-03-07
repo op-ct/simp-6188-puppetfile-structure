@@ -1,0 +1,8 @@
+mod 'simp-nfs',
+  :git => 'https://github.com/simp/pupmod-simp-nfs',
+  :tag => '6.2.0'
+
+mod 'simp-simp_nfs',
+  :git => 'https://github.com/simp/pupmod-simp-simp_nfs',
+  :tag => '0.1.0'
+

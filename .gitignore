@@ -1,0 +1,6 @@
+modules
+.*.sw?
+.bundle/
+.r10k_cache/
+.tmp/
+.vendor/
