@@ -8,6 +8,6 @@ notifications:
 bundler_args: --without development system_tests --path .vendor
 
 script:
-- r10k puppetfile check
-- r10k puppetfile --verbose=info install
+- bundle exec r10k puppetfile check
+- bundle exec r10k puppetfile --verbose=info install
 
