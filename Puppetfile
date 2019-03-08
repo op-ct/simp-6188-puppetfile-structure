@@ -3,19 +3,12 @@ moduledir 'modules'
 # ==============================================================================
 # SIMP Puppetfiles
 # ------------------------------------------------------------------------------
-# Uncomment/comment the SIMP subsystems you want from the list below:
-simp_puppetfiles = [
-  'Puppetfile.core',      # SIMP's core modules **DO NOT DISABLE**
-  'Puppetfile.nfs',       # NFS services and client
-  'Puppetfile.docker',    # Docker managment
-  # 'Puppetfile.elg5',     # Manage an ELG stack (deprecated)
-  # 'Puppetfile.gitlab',   # Manage a GitLab server
-]
-
-simp_puppetfiles.each do |puppetfile|
-  instance_eval(File.read("Puppetfiles/simp/#{puppetfile}"))
-end
+instance_eval(File.read("Puppetfile.simp"))
 # ==============================================================================
+
+
+# Place your modules below this line:
+# ------------------------------------------------------------------------------
 
 # It is recommended to add Roles and Profiles under a `site/` modules directory
 # at the top level of the environment directory/control repo.
@@ -32,7 +25,3 @@ end
 #
 # mod 'simp-site',
 #  :git => 'https://github.com/simp/pupmod-simp-site'
-
-Dir['Puppetfiles/site/Puppetfile*'].each do |puppetfile|
-  instance_eval(File.read(puppetfile))
-end

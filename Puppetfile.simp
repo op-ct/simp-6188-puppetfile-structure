@@ -453,3 +453,99 @@ mod 'voxpupuli-yum',
   :tag => 'v2.2.1'
 
 # vim: set filetype=ruby:
+# -----------------------------------------------------------------------------
+# This Puppetfile includes 'extra' SIMP-tested Puppet modules that manage
+# additional functionality beyond SIMP's core modules.  The modules specified
+# here **require** that the modules in `<env>/Puppetfiles/simp/Puppetfile.core`
+# are also included.
+# -----------------------------------------------------------------------------
+
+mod 'puppetlabs-docker',
+  :git => 'https://github.com/simp/puppetlabs-docker',
+  :tag => '1.1.0'
+
+mod 'simp-simp_docker',
+  :git => 'https://github.com/simp/pupmod-simp-simp_docker',
+  :tag => '0.2.0'
+
+# -----------------------------------------------------------------------------
+# This Puppetfile includes 'extra' SIMP-tested Puppet modules that manage
+# additional functionality beyond SIMP's core modules.  The modules specified
+# here **require** that the modules in `<env>/Puppetfiles/simp/Puppetfile.core`
+# are also included.
+# -----------------------------------------------------------------------------
+
+mod 'elastic-elasticsearch',
+  :git => 'https://github.com/simp/puppet-elasticsearch',
+  :tag => '5.5.0'
+
+mod 'elastic-logstash',
+  :git => 'https://github.com/simp/puppet-logstash',
+  :tag => '5.3.0'
+
+mod 'puppet-grafana',
+  :git => 'https://github.com/simp/puppet-grafana.git',
+  :tag => 'v4.1.1'
+
+mod 'richardc-datacat',
+  # FIXME Next datacat release.
+  # This is a bit messy.  This project has 3 tags that are
+  # all version 0.6.2, but slightly different:
+  #   '0.6.2 from the owner
+  #   'simp-0.6.2' from SIMP team for SIMP4/SIMP5
+  #   'simp6.0.0-0.6.2' from SIMP team for SIMP6
+  # We are going to use the last SIMP team release, until
+  # datacat gets updated and we can get out
+  # of this mess.
+  :git => 'https://github.com/simp/puppet-datacat',
+  :tag => 'simp6.0.0-0.6.2'
+
+mod 'simp-simp_elasticsearch',
+  :git => 'https://github.com/simp/pupmod-simp-simp_elasticsearch',
+  :tag => '5.0.5'
+
+mod 'simp-simp_grafana',
+  :git => 'https://github.com/simp/pupmod-simp-simp_grafana',
+  :tag => '1.0.6'
+
+mod 'simp-simp_logstash',
+  :git => 'https://github.com/simp/pupmod-simp-simp_logstash',
+  :tag => '5.0.2'
+# -----------------------------------------------------------------------------
+# This Puppetfile includes 'extra' SIMP-tested Puppet modules that manage
+# additional functionality beyond SIMP's core modules.  The modules specified
+# here **require** that the modules in `<env>/Puppetfiles/simp/Puppetfile.core`
+# are also included.
+# -----------------------------------------------------------------------------
+
+
+#FIXME Does not support Puppet 5 yet.  Also, needs to be tested with
+# Vox Pupuli puppet/gitlab 2.0.0, which does support Puppet 5.
+# puppet/gitlab is the new name for vshn/gitlab.  When Vox Pupuli
+# took over that project, they changed the name.
+mod 'simp-simp_gitlab',
+  :git => 'https://github.com/simp/pupmod-simp-simp_gitlab',
+  :tag => '0.3.4'
+
+
+#FIXME vshn/gitlab does not support Puppet 5, However, puppet/gitlab
+# 2.0.0 does.  puppet/gitlab is the new name for vshn/gitlab.  When
+# Vox Pupuli took over that project, they changed the name.
+mod 'vshn-gitlab',
+  :git => 'https://github.com/simp/puppet-gitlab.git',
+  :tag => 'v1.13.3'
+# -----------------------------------------------------------------------------
+# This Puppetfile includes 'extra' SIMP-tested Puppet modules that manage
+# additional functionality beyond SIMP's core modules.  The modules specified
+# here **require** that the modules in `<env>/Puppetfiles/simp/Puppetfile.core`
+# are also included.
+# -----------------------------------------------------------------------------
+
+mod 'simp-nfs',
+  :git => 'https://github.com/simp/pupmod-simp-nfs',
+  :tag => '6.2.0'
+
+mod 'simp-simp_nfs',
+  :git => 'https://github.com/simp/pupmod-simp-simp_nfs',
+  :tag => '0.1.0'
+
