@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------------------
+# This Puppetfile includes 'extra' SIMP-tested Puppet modules that manage
+# additional functionality beyond SIMP's core modules.  The modules specified
+# here **require** that the modules in `<env>/Puppetfiles/simp/Puppetfile.core`
+# are also included.
+# -----------------------------------------------------------------------------
+
 mod 'elastic-elasticsearch',
   :git => 'https://github.com/simp/puppet-elasticsearch',
   :tag => '5.5.0'

@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------------------
+# This Puppetfile includes 'extra' SIMP-tested Puppet modules that manage
+# additional functionality beyond SIMP's core modules.  The modules specified
+# here **require** that the modules in `<env>/Puppetfiles/simp/Puppetfile.core`
+# are also included.
+# -----------------------------------------------------------------------------
+
 mod 'puppetlabs-docker',
   :git => 'https://github.com/simp/puppetlabs-docker',
   :tag => '1.1.0'
